@@ -1,0 +1,147 @@
+:root {
+    --oxford-blue: hsl(217, 54%, 11%);
+    --light-oxford-blue: hsl(216, 50%, 16%);
+    --indigo-dye: hsl(215, 32%, 27%);
+    --blue-yonder: hsl(216, 30%, 55%);
+    --aqua: hsl(178, 100%, 50%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Outfit", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: var(--oxford-blue);
+    min-height: 100vh;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta {
+    background: var(--light-oxford-blue);
+    max-width: 350px;
+    padding: 24px;
+    border-radius: 15px;
+    box-shadow: 0px 20px 25px 15px rgba(0, 0, 0, 0.05),
+        0px 40px 30px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta_nfc_img {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.tarjeta_nfc_img::after {
+    --aqua: hsla(178, 100%, 50%, 0.5);
+
+    content: url(./images/icon-view.svg);
+    background: var(--aqua);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.25s ease;
+}
+
+.tarjeta_nfc_img:hover::after {
+    opacity: 1;
+}
+
+.tarjeta_nfc_img img {
+    width: 100%;
+    display: block;
+}
+
+.tarjeta_cuerpo {
+    padding: 23px 0;
+    border-bottom: 1px solid var(--indigo-dye);
+    margin-bottom: 15px;
+}
+
+.tarjeta_titulo {
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.tarjeta_titulo:hover {
+    color: var(--aqua);
+}
+
+.tarjeta_texto {
+    color: var(--blue-yonder);
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 23px;
+}
+
+.tarjeta_cuerpo .cubierta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tarjeta_precio,
+.tarjeta_reloj {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.tarjeta_precio {
+    color: var(--aqua);
+}
+
+.tarjeta_icono {
+    margin-right: 6px;
+}
+
+.tarjeta_reloj {
+    color: var(--blue-yonder);
+}
+
+.tarjeta_abajo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tarjeta_autor_img {
+    width: 34px;
+    height: 34px;
+    border: 2px solid var(--white);
+    border-radius: 50px;
+    margin-right: 15px;
+}
+
+.tarjeta_autor_nombre {
+    color: var(--blue-yonder);
+    font-weight: 500;
+}
+
+.tarjeta_autor_nombre a {
+    color: var(--white);
+    font-weight: 400;
+}
+
+.tarjeta_autor_nombre a:hover {
+    color: var(--aqua);
+}
