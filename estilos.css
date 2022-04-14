@@ -25,11 +25,7 @@ body {
     background: var(--oxford-blue);
     min-height: 100vh;
     padding: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
-
 .tarjeta {
     background: var(--light-oxford-blue);
     max-width: 350px;
@@ -144,4 +140,27 @@ body {
 
 .tarjeta_autor_nombre a:hover {
     color: var(--aqua);
+}
+.button-container{
+    margin-top: 20px;
+    height: 36px;
+    
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+.button{
+    width: 100px;
+    border-radius: 5px;
+    border:1px solid white;
+    color: var(--White);
+    background-color:var(--aqua);
+    cursor: pointer;
+}
+.button:hover{
+    color:var(--aqua);
+    background-color: var(--White);
+}
+.button:disabled{
+    opacity: 0.5;
 }
